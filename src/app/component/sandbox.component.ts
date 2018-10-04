@@ -1,36 +1,30 @@
 import { Component } from '@angular/core';
+import { unescapeIdentifier } from '@angular/compiler';
 
 @Component({
     selector : 'sandbox',
-    template : `<h1>Hello World..</h1><br>
-    my name is {{name}}, <br> i am {{age }} years old<br>
-    My last name is {{fullname.lastname}}
-    <ul>
-        <li>{{ 'Hello World' }}</li>
-        <li>{{ 2 * 2 + 4 - 8}}</li>
-        <li>{{showAge()}}</li>
-    </ul>
-
+    template : `<h1>Data Types</h1>
+    {{name }} <br />
+    {{age }} <br />
+    {{hasChildren }} <br />
+    {{city }} <br />
+    {{myNumberArray }} <br />
+    {{myStringArray}} <br />
+    {{unusable }} <br />
+    {{u }} <br />
+    {{n }} <br />
     `
 })
 
 export class sandboxComponent{
-    name = "Dipesh";
-    age = 25;
-    fullname = {firstname:"Dipesh", lastname:"Goswami"};
-
-    constructor(){
-        console.log("Console is working"); 
-        //this.age = 36;
-        this.hasBirthday();
-    }
-
-    hasBirthday(){
-            this.age += 1;
-    }   
-
-    showAge(){
-        return this.age;
-    }
+   name: string = "Dipesh Goswami";
+   age:number =25;
+   hasChildren:boolean = false;
+   city:any = "m1g 3s5";
+   myNumberArray:number[] = [1,2,3];
+   myStringArray:any[] = ['Hello','World'];
+   unusable:void = undefined;
+   u: undefined = undefined;
+   n: null = null;
 
 }
