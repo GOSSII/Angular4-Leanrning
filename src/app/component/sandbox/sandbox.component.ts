@@ -8,24 +8,7 @@ import { unescapeIdentifier } from '@angular/compiler';
 })
 
 export class sandboxComponent{
-    hrDept = ['Dipesh','Parth','Sanket','TEST'];
-
-    empName = [
-        {
-            firstname : 'Dipesh',
-            lastname : 'Goswami'
-        },
-        {
-            firstname : 'Parth',
-            lastname : 'Jani'
-        },
-        {
-            firstname : 'Sanket',
-            lastname : 'Vagadiya'
-        }
-    ];
-
-    constructor(){
-        this.hrDept[3] = "Ishrat"
-    }
+    name:string = 'Dipesh';
+    showName:boolean = true;
+    day:number = 0;
 }

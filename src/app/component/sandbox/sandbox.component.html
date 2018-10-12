@@ -1,23 +1,19 @@
-<h2 class="title">Company Departments</h2>
+<h2 class="title">*ngFor and ngSwitchcase</h2>
 
-<P>Simple Formate of displaying the Array</P>
-<h4>{{hrDept}}</h4>
+<h3>
+    *Hello 
+   <span *ngIf="showName">{{name}}</span>
+</h3>
 
-<div class="row">
-  <h4 class="col-md-6">HR Deprtments</h4>
-  <ul *ngFor="let emp of hrDept">
-    <li>{{emp}}</li>
-  </ul>
+<span *ngIf = "showName; else noName">How are you {{name}}</span>
+<ng-template #noName>World</ng-template>
 
-  <h4 class="col-md-6">HR Deprtments with Index</h4>
-  <ul *ngFor="let emp of hrDept; let i = index">
-    <li>{{i + 1}} {{emp}}</li>
-  </ul>
-</div>
+<p>How's your Day {{ showName ? name : 'world'}}</p>
 
-<div class="row">
-  <h4 class="col-md-6">Employee Name</h4>
-  <ul *ngFor="let person of empName">
-    <li>{{person.firstname}} {{person.lastname}}</li>
-  </ul>
+<hr>
+<div [ngSwitch] = "day">Today is 
+    <div *ngSwitchCase = "'1'">Monday</div>
+    <div *ngSwitchCase = "'2'">Thusday</div>
+    <div *ngSwitchCase = "'3'">Friday</div>
+    <div *ngSwitchDefault>Holiday</div>
 </div>
