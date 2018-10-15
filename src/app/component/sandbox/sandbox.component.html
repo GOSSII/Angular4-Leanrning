@@ -1,14 +1,3 @@
-<h2 class="title">Property Binding</h2>
-<!-- 3 ways to bind properties -->
-<div><img src="{{imageUrl}}" alt="">
-<img [src]="imageUrl" alt="">
-<img bind-src="imageUrl" alt=""></div>
-
-<h4>Image Location: 
-    <span [textContent]="imageUrl"></span>
-</h4>
-
-<hr>
-<h3>Create New Post</h3>
-<p [hidden]="isUnChanged"> Post has been Changed</p>
-<button [disabled]="isUnChanged">Save</button>
+<h2 class="title">Class Binding  ngClass</h2>
+<h4 [class.special]="isSpecial">This class binding is Special</h4>
+<h4 [ngClass]="club">This is the Example of Multiple classes</h4>

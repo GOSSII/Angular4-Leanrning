@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { unescapeIdentifier } from '@angular/compiler';
 
 @Component({
     selector : 'sandbox',
@@ -8,6 +7,18 @@ import { unescapeIdentifier } from '@angular/compiler';
 })
 
 export class sandboxComponent{
-     imageUrl :string = "https://dummyimage.com/300x200/"; 
-     isUnChanged : boolean = false;  
+    isSpecial: Boolean = true;
+    isTransform : boolean =true;
+    club  = {};
+
+    constructor(){
+        this.setClubClasses();
+    }
+
+   setClubClasses(){
+    this.club = {
+        special : this.isSpecial,
+        transform : this.isTransform
+    }
+   }
 }
