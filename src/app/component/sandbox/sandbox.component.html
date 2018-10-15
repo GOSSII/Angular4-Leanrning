@@ -1,19 +1,14 @@
-<h2 class="title">*ngFor and ngSwitchcase</h2>
+<h2 class="title">Property Binding</h2>
+<!-- 3 ways to bind properties -->
+<div><img src="{{imageUrl}}" alt="">
+<img [src]="imageUrl" alt="">
+<img bind-src="imageUrl" alt=""></div>
 
-<h3>
-    *Hello 
-   <span *ngIf="showName">{{name}}</span>
-</h3>
-
-<span *ngIf = "showName; else noName">How are you {{name}}</span>
-<ng-template #noName>World</ng-template>
-
-<p>How's your Day {{ showName ? name : 'world'}}</p>
+<h4>Image Location: 
+    <span [textContent]="imageUrl"></span>
+</h4>
 
 <hr>
-<div [ngSwitch] = "day">Today is 
-    <div *ngSwitchCase = "'1'">Monday</div>
-    <div *ngSwitchCase = "'2'">Thusday</div>
-    <div *ngSwitchCase = "'3'">Friday</div>
-    <div *ngSwitchDefault>Holiday</div>
-</div>  
+<h3>Create New Post</h3>
+<p [hidden]="isUnChanged"> Post has been Changed</p>
+<button [disabled]="isUnChanged">Save</button>

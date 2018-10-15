@@ -8,7 +8,6 @@ import { unescapeIdentifier } from '@angular/compiler';
 })
 
 export class sandboxComponent{
-    name:string = 'Dipesh';
-    showName:boolean = true;
-    day:number = 0;
+     imageUrl :string = "https://dummyimage.com/300x200/"; 
+     isUnChanged : boolean = false;  
 }
